@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { FaQuoteRight } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import axios from "axios";
 import DataFetcher from "./DataFetcher";
 
 const Carousel = () => {
@@ -43,7 +42,10 @@ const Carousel = () => {
 
   return (
     <section className="slider-container">
-      <DataFetcher onDataFetched={onDataFetched} />
+      <DataFetcher
+        onDataFetched={onDataFetched}
+        accessKey="c1WH65ruQYEbB_aNMbk-XBLKLcXQPk8Xh6wh-ivPRHY"
+      />
       {people.map((person, personIndex) => {
         const { id, image, name, title, quote } = person;
         const uniqueKey = `${id}-${personIndex}`;

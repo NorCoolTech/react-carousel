@@ -2,13 +2,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const DataFetcher = ({ onDataFetched }) => {
+const DataFetcher = ({ onDataFetched, accessKey }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get("https://api.unsplash.com/photos/", {
           params: {
-            client_id: "c1WH65ruQYEbB_aNMbk-XBLKLcXQPk8Xh6wh-ivPRHY",
+            client_id: accessKey,
             count: 10,
           },
         });
@@ -29,9 +29,9 @@ const DataFetcher = ({ onDataFetched }) => {
     };
 
     fetchData();
-  }, [onDataFetched]);
+  }, []);
 
-  return null; 
+  return null;
 };
 
 export default DataFetcher;
