@@ -48,7 +48,6 @@ const SlickCarousel = () => {
       )}
       <DataFetcher
         onDataFetched={onDataFetched}
-        accessKey="P5g5Nt89IL4HV_KU9XCxTQd5vyVlJa_EvAtn3_zxLkI"
       />
     </section>
   );

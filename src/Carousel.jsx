@@ -44,7 +44,6 @@ const Carousel = () => {
     <section className="slider-container">
       <DataFetcher
         onDataFetched={onDataFetched}
-        accessKey="c1WH65ruQYEbB_aNMbk-XBLKLcXQPk8Xh6wh-ivPRHY"
       />
       {people.map((person, personIndex) => {
         const { id, image, name, title, quote } = person;
